@@ -10,6 +10,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<FakeDbService>();
 
+builder.Services.AddTransient<IGuidGeneratorService, GuidGeneratorService>();
+builder.Services.AddScoped<IGuidGeneratorServiceBis, GuidGeneratorServiceBis>();
+builder.Services.AddSingleton<IGuidGeneratorServiceTer, GuidGeneratorServiceTer>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
