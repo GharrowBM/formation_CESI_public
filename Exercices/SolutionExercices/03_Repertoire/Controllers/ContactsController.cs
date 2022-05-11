@@ -90,12 +90,13 @@ namespace TP04.Controllers
             contact.Email = newValues.Email;
             contact.Gender = newValues.Gender;
             contact.Phone = newValues.Phone;
+            contact.DateOfBirth = newValues.DateOfBirth;
 
             if (context.SaveChanges() > 0)
             {
                 return Ok(new
                 {
-                    Message = "LE contact a été modifié avec succès !",
+                    Message = "Le contact a été modifié avec succès !",
                     Contact = contact
                 });
             }

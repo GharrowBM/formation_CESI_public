@@ -15,7 +15,5 @@ namespace _03_Repertoire.Models
         [EmailAddress]
         public string EmailAddress { get; set; }
         public bool IsAdmin { get; set; }
-
-        public static int Count;
     }
 }
