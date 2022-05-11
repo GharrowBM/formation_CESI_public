@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoAPI_Base", "DemoAPI_Bas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoAPI_JWT", "DemoAPI_JWT\DemoAPI_JWT.csproj", "{C681B70F-9C43-4823-92B7-74F8D3D65D86}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoAPI_EFCore_Base", "DemoAPI_EFCore_Base\DemoAPI_EFCore_Base.csproj", "{462379EE-77E8-4C84-8C34-547B47ACB9D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C681B70F-9C43-4823-92B7-74F8D3D65D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C681B70F-9C43-4823-92B7-74F8D3D65D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C681B70F-9C43-4823-92B7-74F8D3D65D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462379EE-77E8-4C84-8C34-547B47ACB9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462379EE-77E8-4C84-8C34-547B47ACB9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462379EE-77E8-4C84-8C34-547B47ACB9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462379EE-77E8-4C84-8C34-547B47ACB9D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
