@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Repertoire", "03_Reperto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Repertoire", "03_Repertoire\03_Repertoire.csproj", "{946B1BFE-1F5E-49ED-9089-F4C8A83BC0EC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Demenagements", "04_Demenagements", "{3C374443-8A98-4F12-80D1-DCE2766779D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Demenagements", "03_Demenagements\03_Demenagements.csproj", "{63598334-4534-4055-B015-33B95DFB29D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{946B1BFE-1F5E-49ED-9089-F4C8A83BC0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{946B1BFE-1F5E-49ED-9089-F4C8A83BC0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{946B1BFE-1F5E-49ED-9089-F4C8A83BC0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63598334-4534-4055-B015-33B95DFB29D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63598334-4534-4055-B015-33B95DFB29D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63598334-4534-4055-B015-33B95DFB29D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63598334-4534-4055-B015-33B95DFB29D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{3DF85FF0-A90F-4860-A13F-8B32D2A9CA6B} = {F2D15383-CEAE-4BC0-924F-A37F6348A467}
 		{A24370B0-2A2B-4AC7-B1F6-716C94431024} = {A833D82F-93DC-400F-999A-9BB08C04A518}
 		{946B1BFE-1F5E-49ED-9089-F4C8A83BC0EC} = {E50C6211-F1BD-4467-8B49-659B6E64C3F0}
+		{63598334-4534-4055-B015-33B95DFB29D6} = {3C374443-8A98-4F12-80D1-DCE2766779D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DEBF0DB6-039A-4536-8A5F-A840D2E61EE8}
