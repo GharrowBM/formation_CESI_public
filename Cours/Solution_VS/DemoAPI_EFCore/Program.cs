@@ -1,4 +1,5 @@
-using _03_Demenagements.Datas;
+using DemoAPI_EFCore.Datas;
+using DemoAPI_EFCore.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -14,8 +15,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"))
+    .LogTo(Console.WriteLine, LogLevel.Information));
+
+builder.Services.AddScoped<IRepository<Dog>, DogsRepository>();
+builder.Services.AddScoped<IRepository<Master>, MastersRepository>();
+builder.Services.AddScoped<IRepository<Address>, AddressesRepository>();
+builder.Services.AddScoped<IRepository<Account>, AccountsRepository>();
+
+builder.Services.AddCors(options => {
+    options.AddPolicy("allConnections", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
 });
 
 builder.Services.AddAuthentication(options =>
