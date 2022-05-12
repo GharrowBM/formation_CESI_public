@@ -1,0 +1,23 @@
+
+version: '3.4'
+
+services:
+  07_ebooks:
+    image: ${DOCKER_REGISTRY-}07ebooks
+    build:
+      context: .
+      dockerfile: 07_eBooks/Dockerfile
+    depends_on:
+        - sqldb
+  sqldb:
+      image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+      volumes:
+        - sql-vol:/var/opt/mssql
+      environment:
+        - SA_PASSWORD=MyVerySecurePassword
+        - ACCEPT_EULA=Y
+      ports:
+        - "1433:1433"
+
+volumes:
+  sql-vol: 

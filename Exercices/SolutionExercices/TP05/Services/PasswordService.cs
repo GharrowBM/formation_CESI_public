@@ -4,13 +4,7 @@ namespace TP05.Services
 {
     public class PasswordService
     {
-        public PasswordService(IConfiguration config)
-        {
-            this.config = config;
-        }
         private const string SecurityKey = "Clé de cryptage des mots de passe = salt";
-        private readonly IConfiguration config;
-
         public string EncryptPassword(string password)
         {
             if (string.IsNullOrEmpty(password)) return "";

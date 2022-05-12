@@ -74,7 +74,6 @@ namespace _03_Repertoire.Controllers
         }
 
         [HttpDelete("/account/{id}")]
-        [Authorize(Roles = "Admin")]
         public IActionResult RemoveAccountById(int id)
         {
             var found = context.Accounts.FirstOrDefault(x => x.Id == id);
@@ -104,8 +103,7 @@ namespace _03_Repertoire.Controllers
             });
         }
 
-        [Authorize(Roles = "Admin")]
-        [HttpPatch("/account/{id}")].
+        [HttpPatch("/account/{id}")]
         public IActionResult EditAccountById(int id, Account newValues)
         {
             var found = context.Accounts.FirstOrDefault(x => x.Id == id);

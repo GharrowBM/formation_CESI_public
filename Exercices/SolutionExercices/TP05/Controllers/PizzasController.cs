@@ -10,7 +10,6 @@ namespace TP05.Controllers
     [Route("api/[controller]")]
     [EnableCors("allConnections")]
     [ApiController]
-    [Authorize("admin")]
     public class PizzasController : ControllerBase
     {
         private IRepository<Pizza> _pizzasRepository;
@@ -30,6 +29,7 @@ namespace TP05.Controllers
         }
 
         [HttpPost("/pizza")]
+        [Authorize("admin")]
         public IActionResult SubmitNewPizza([FromForm] string name, [FromForm] string description, [FromForm] double price, [FromForm] bool isVegan, [FromForm] bool isSpicy, [FromForm] string pictureURL)
         {
             Pizza newPizza = new Pizza()
@@ -50,6 +50,7 @@ namespace TP05.Controllers
         }
 
         [HttpPost("/pizza/add-topping/{pizzaId}")]
+        [Authorize("admin")]
         public IActionResult AddIngredientToPizza(int pizzaId, [FromForm] string name, [FromForm] string description)
         {
             Pizza pizzaToEdit = _pizzasRepository.GetById(pizzaId);
@@ -73,6 +74,7 @@ namespace TP05.Controllers
         }
 
         [HttpDelete("/pizza/remove-topping/{pizzaId}/{toppingId}")]
+        [Authorize("admin")]
         public IActionResult RemoveIngredientFromPizza(int pizzaId, int toppingId)
         {
             Pizza pizzaToEdit = _pizzasRepository.GetById(pizzaId);
@@ -92,6 +94,7 @@ namespace TP05.Controllers
         }
 
         [HttpPut("/pizza/{id}")]
+        [Authorize("admin")]
         public IActionResult EditPizza(int id, [FromForm] string name, [FromForm] string description, [FromForm] double price, [FromForm] bool isVegan, [FromForm] bool isSpicy, [FromForm] string pictureURL)
         {
             Pizza pizzaToEdit = _pizzasRepository.GetById(id);
@@ -119,6 +122,7 @@ namespace TP05.Controllers
         }
 
         [HttpDelete("/pizza/{id}")]
+        [Authorize("admin")]
         public IActionResult DeletePizza(int id)
         {
             Pizza pizzaToDelete = _pizzasRepository.GetById(id);
